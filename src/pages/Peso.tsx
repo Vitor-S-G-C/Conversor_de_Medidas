@@ -1,12 +1,17 @@
-export default function WeightConverter () {
+export default function PesoConverter () {
 
-   //Unidades: km, m, cm, mm, mi (milhas), yd (jardas), ft (pés), in (polegadas)
-  //*Conversão: baseada em metros como unidade base
+//Quilograma (kg): Unidade padrão do Sistema Internacional de Unidades (SI).
+//Grama (g): Unidade menor, equivalente a 0,001 kg.
+//Tonelada (t): Unidade maior, equivalente a 1000 kg.
+//Miligrama (mg): Submúltiplo do grama, usado para massas muito pequenas.
+//Centigrama (cg): Outro submúltiplo do grama.
+//Decigrama (dg): Submúltiplo do grama.
+//Decagrama (dag): Múltiplo do grama.
+//Hectograma (hg): Múltiplo do grama
     return <>
 
-        <h1>Conversor de Peso</h1>
-        <p>Este é um conver conver conver conver conver conver conver conver conver conver conversor de distância.</p>
-        {          /* Aqui você pode adicionar os campos de entrada e lógica de conversão */
-        }
+        <h1>Conversor de Distância</h1>
+        <p>Este é um conversor de distância.</p>
+        
     </>
 }

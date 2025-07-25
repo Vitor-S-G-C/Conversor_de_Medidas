@@ -1,8 +1,8 @@
 import  Navbar  from './components/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import  TemperatureConverter  from './pages/Temperatura';
-import DistanceConverter from './pages/Distancia';
-import WeightConverter  from './pages/Peso';
+import DistanceConverter from './pages/Peso';
+import WeightConverter  from './pages/Distancia';
 import  Home  from './pages/Home';
 import { Container } from "react-bootstrap";
 
