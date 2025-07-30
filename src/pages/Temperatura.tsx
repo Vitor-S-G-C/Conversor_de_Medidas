@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Row } from "react-bootstrap";
 
 type TemperatureUnit = "C" | "F" | "K";
 
@@ -40,12 +41,13 @@ export default function ConvertTemperature() {
 
   const result = convertTemperature(value, fromUnit, toUnit);
 
-  return (
-    <div className="p-4 max-w-md mx-auto bg-white rounded shadow">
+  return ( 
+    <Row md={2} xs={1} lg={3} className="g-3">
+    <div className="p-4 max-w-md mx-auto bg-light  rounded shadow">
       <h2 className="text-xl font-bold mb-4">Conversor de Temperatura</h2>
 
       <div className="mb-2">
-        <label className="block mb-1">Valor:</label>
+        <label className="block mb-1"><p>Valor:</p></label>
         <input
           type="number"
           value={value}
@@ -56,7 +58,7 @@ export default function ConvertTemperature() {
 
       <div className="mb-2 flex gap-4">
         <div className="flex-1">
-          <label className="block mb-1">De:</label>
+          <label className="block mb-1"><p>De:</p></label>
           <select
             value={fromUnit}
             onChange={(e) => setFromUnit(e.target.value as TemperatureUnit)}
@@ -69,7 +71,7 @@ export default function ConvertTemperature() {
         </div>
 
         <div className="flex-1">
-          <label className="block mb-1">Para:</label>
+          <label className="block mb-1"><p>Para:</p></label>
           <select
             value={toUnit}
             onChange={(e) => setToUnit(e.target.value as TemperatureUnit)}
@@ -83,8 +85,11 @@ export default function ConvertTemperature() {
       </div>
 
       <div className="mt-4">
-        <strong>Resultado:</strong> {result.toFixed(2)}°{toUnit}
+        <p>
+          <strong>Resultado:</strong> {result.toFixed(2)}°{toUnit}
+     </p>
       </div>
     </div>
+    </Row>
   );
 }
