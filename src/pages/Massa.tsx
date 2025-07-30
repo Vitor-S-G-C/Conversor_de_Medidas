@@ -1,9 +1,14 @@
 import { useState } from "react";
 import { Row } from "react-bootstrap";
+import WeightConverter, { type WeightUnit }  from "../components/Weight"; // Importando a função de conversão de peso
 
-type WeightUnit = "kg" | "g" | "t" | "mg" | "cg" | "dg" | "dag" | "hg";
 
-const unitNames: Record<WeightUnit, string> = {
+
+
+
+export default function ConvertWeight() {
+
+  const unitNames: Record<WeightUnit, string> = {
   kg: "Quilograma (kg)",
   g: "Grama (g)",
   t: "Tonelada (t)",
@@ -13,63 +18,6 @@ const unitNames: Record<WeightUnit, string> = {
   dag: "Decagrama (dag)",
   hg: "Hectograma (hg)",
 };
-
-function WeightConverter(value: number, from: WeightUnit, to: WeightUnit): number {
-  if (from === to) return value;
-
-  let kilograms: number;
-  switch (from) {
-    case "kg":
-      kilograms = value;
-      break;
-    case "g":
-      kilograms = value / 1000;
-      break;
-    case "t":
-      kilograms = value * 1000;
-      break;
-    case "mg":
-      kilograms = value / 1e6;
-      break;
-    case "cg":
-      kilograms = value / 100000;
-      break;
-    case "dg":
-      kilograms = value / 10000;
-      break;
-    case "dag":
-      kilograms = value / 100;
-      break;
-    case "hg":
-      kilograms = value / 10;
-      break;
-    default:
-      return value;
-  }
-
-  switch (to) {
-    case "kg":
-      return kilograms;
-    case "g":
-      return kilograms * 1000;
-    case "t":
-      return kilograms / 1000;
-    case "mg":
-      return kilograms * 1e6;
-    case "cg":
-      return kilograms * 100000;
-    case "dg":
-      return kilograms * 10000;
-    case "dag":
-      return kilograms * 100;
-    case "hg":
-      return kilograms * 10;
-    default:
-      return value;
-  }
-}
-
-export default function ConvertWeight() {
   const [value, setValue] = useState(0);
   const [fromUnit, setFromUnit] = useState<WeightUnit>("kg");
   const [toUnit, setToUnit] = useState<WeightUnit>("g");
@@ -78,7 +26,7 @@ export default function ConvertWeight() {
   return (
     <Row md={2} xs={1} lg={3} className="g-3">
       <div className="p-4 max-w-md mx-auto bg-light  rounded shadow">
-        <h2 className="text-xl font-bold mb-3">Conversor de Peso</h2>
+        <h2 className="text-xl font-bold mb-3"> Peso</h2>
 
         <div className="mb-2">
           <label className="block mb-1"><p>Valor:</p></label>

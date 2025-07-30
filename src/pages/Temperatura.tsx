@@ -1,40 +1,9 @@
 import { useState } from "react";
 import { Row } from "react-bootstrap";
-
-type TemperatureUnit = "C" | "F" | "K";
-
-function convertTemperature(value: number, from: TemperatureUnit, to: TemperatureUnit): number {
-  if (from === to) return value;
-
-  let celsius: number;
-
-  switch (from) {
-    case "C":
-      celsius = value;
-      break;
-    case "F":
-      celsius = (value - 32) * (5 / 9);
-      break;
-    case "K":
-      celsius = value - 273.15;
-      break;
-    default:
-      return value;
-  }
-
-  switch (to) {
-    case "C":
-      return celsius;
-    case "F":
-      return celsius * (9 / 5) + 32;
-    case "K":
-      return celsius + 273.15;
-    default:
-      return value;
-  }
-}
+import { convertTemperature, type TemperatureUnit } from "../components/Temp";
 
 export default function ConvertTemperature() {
+
   const [value, setValue] = useState(0);
   const [fromUnit, setFromUnit] = useState<TemperatureUnit>("C");
   const [toUnit, setToUnit] = useState<TemperatureUnit>("F");
@@ -44,7 +13,7 @@ export default function ConvertTemperature() {
   return ( 
     <Row md={2} xs={1} lg={3} className="g-3">
     <div className="p-4 max-w-md mx-auto bg-light  rounded shadow">
-      <h2 className="text-xl font-bold mb-4">Conversor de Temperatura</h2>
+      <h2 className="text-xl font-bold mb-4">Temperatura</h2>
 
       <div className="mb-2">
         <label className="block mb-1"><p>Valor:</p></label>

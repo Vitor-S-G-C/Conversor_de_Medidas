@@ -2,6 +2,7 @@ import { Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Tema from "../util/Mod";
 
+
 export default function Navbar() {
   return (
     <NavbarBs sticky="top" className="bg-black shadow-sm mb-3">
@@ -15,7 +16,7 @@ export default function Navbar() {
           Comprimento
           </Nav.Link>
           
-          <Nav.Link to="/Peso" as={NavLink}>
+          <Nav.Link to="/Massa" as={NavLink}>
            Massa
           </Nav.Link>
 
