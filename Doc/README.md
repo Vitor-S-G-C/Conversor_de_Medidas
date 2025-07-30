@@ -25,18 +25,31 @@
 ### Estrutura do sistema
 
 **src/**
+
 **├── components/**
-**│   ├── DistanceConverter.tsx**
-**│   ├── WeightConverter.tsx**
-**│   ├── TemperatureConverter.tsx**
+
+**│   └── DistanceConverter.tsx**
+
+**│   └── WeightConverter.tsx**
+
+**│   └── TemperatureConverter.tsx**
+
 **│   └── UnitSelector.tsx**
+
 **├── pages/**
+
 **│   └── Home.tsx**
+
 **├── types/**
+
 **│   └── units.ts**
+
 **├── utils/**
+
 **│   └── conversion.ts**
+
 **├── App.tsx**
+
 **└── main.tsx**
 
 
