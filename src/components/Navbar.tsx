@@ -5,7 +5,7 @@ import Tema from "../util/Mod";
 
 export default function Navbar() {
   return (
-    <NavbarBs sticky="top" className="bg-black shadow-sm mb-3">
+    <NavbarBs sticky="top" className="shadow-sm mb-3">
       <Container>
         <Nav className="me-auto" style={{ fontSize: "1.2rem ", color: "blou" }}>
           <Nav.Link to="/Home" as={NavLink}>
@@ -23,6 +23,8 @@ export default function Navbar() {
           <Nav.Link to="/Temperatura" as={NavLink}>
             Temperature
           </Nav.Link>
+
+          
         </Nav>
          <Tema />
       </Container>

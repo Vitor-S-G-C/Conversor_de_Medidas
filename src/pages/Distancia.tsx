@@ -14,7 +14,7 @@ export default function ConvertDistance() { // Renomeado para 'ConvertDistance'
 
   return (
     <Row md={2} xs={1} lg={3} className="g-3">
-    <div className="p-4 max-w-md mx-auto bg-light  rounded shadow">
+    <div className="p-4 max-w-md mx-auto rounded shadow" style={{ border: "1px solid #ffffff" }}>
       <h2 className="text-xl font-bold mb-4">Comprimento</h2>
 
       <div className="mb-2">

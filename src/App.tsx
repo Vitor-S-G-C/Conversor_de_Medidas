@@ -5,7 +5,8 @@ import ConvertWeight from './pages/Massa';
 import ConvertDistance from './pages/Distancia';  
 import  Home  from './pages/Home';
 import { Container } from "react-bootstrap";
- //import "./style/App"; 
+ import './App.css';
+
 
 function App() {
   
